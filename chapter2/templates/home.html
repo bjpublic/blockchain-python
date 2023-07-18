@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+   
+    {% with messages = get_flashed_messages() %}
+   
+   
+    {% if messages %}
+        <script>
+
+             alert("{{messages[-1]}}")
+           
+    </script>
+              
+            {% endif %}
+   
+            {% endwith %}
+<!-- header.html -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="DataLab Team">
+
+    <title>파공블 Project</title>
+
+
+</head>
+
+ 
+<!-- End of header.html  -->
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- navigator.html -->
+
+        <!-- End of navigator.html  -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+<br><br>
+                    <!-- Page Heading -->
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0 text-gray-800">   <b>{{userName}}</b>   님의 파공블 코인 현황</h1>
+                       
+                         <h4>        supported by 파공블 Network   </h4>  
+
+                    </div>
+
+                    <!-- Content Row -->
+                    <div class="row">
+
+                        <!-- Earnings (Monthly) Card Example -->
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-primary shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                            현재 소유 코인</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">{{savings}}</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Earnings (Monthly) Card Example -->
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-success shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                               현재까지 소비 코인</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">{{used}}</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                       
+                                                <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-success shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                               코인 보내기 </div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                           
+                                  <form  action = "transaction"  method = "POST" onsubmit = "toEnabled()">
+                                       
+                                      보내는사람 지갑주소 :  <input  name = "sender" id="employnumber" value =  {{userName}} disabled /> <br>                              
+                                       받을사람 지갑주소 :  <input type="text" name = "employnumber" id="employnumber" /> <br>
+                                        보낼 코인 :  <input type="text"  name = "sendable_point" id="InputPassword" / >
+                                      
+                                    <input type = "submit"  value = "코인보내기" />
+                               
+                            </form> 
+                                           
+                                           
+                                            </div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                       
+                       
+                       
+
+                       
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+
+   
+</body>
+
+<script type="text/javascript">
+function toEnabled() {
+    $("input[name=sender]").attr("disabled", false);
+}
+</script>
+   
+   <br><br><br><br>
+   
+<!-- footer.html -->
+{% include "/footer.html" %}
+<!-- End of footer.html  -->
+
+</html>

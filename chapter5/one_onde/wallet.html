@@ -1,0 +1,27 @@
+
+ <h1> <center>  pyBTC Block Chain Wallet</center></h1>
+
+<h3>  내 지갑 주소 : {{wallet_id}}</h3>
+<br>
+<h3>  내 지갑 잔액 : {{wallet_value}} pyBTC</h3>
+
+<form action="wallet" method="POST">
+    
+        <div class="form-group">
+<!--             보내는 사람의 지갑 주소는 미리 back-end에서 return 되어 수정되면 안되기에 read-only 형식 -->
+        <input type="text" name="send_from" value= '{{wallet_id}}'  size="80" readonly>
+    </div>
+
+    <div class="form-group">
+        <input type="text" name="send_target" placeholder="보낼 지갑주소를 입력해주세요!" size="80" >
+    </div>
+        <div class="form-group">
+        <input type="text" name="send_value" placeholder="보낼 pyBTC 수량을 입력해주세요!" size="30">
+    </div>
+    
+    <div class="form-group">
+        <input type="submit" value="보내기" />
+    </div>
+
+</form>
+
