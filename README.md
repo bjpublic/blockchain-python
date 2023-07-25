@@ -11,7 +11,7 @@
    
 이 책은 Python으로 블록체인 요소들을 학습니다.  
 PoS, PoW 방식의 실제 블록체인 네트워크를 각각 구현한 뒤  
-DeFi, NFT 등을 직접 자기의 블록체인 네트워크 상에 만들 수 있습니다.
+DeFi, NFT 등을 직접 자신의 블록체인 네트워크 상에 만들 수 있습니다.
 <br/> <br/> <br/> <br/> 
 ### 🖥️ 기술 스택  
 <img src="https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=python&logoColor=white"> <img src="https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=SQLite&logoColor=white"> <img src="https://img.shields.io/badge/flask-000000?style=for-the-badge&logo=flask&logoColor=white"> <img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"> 
